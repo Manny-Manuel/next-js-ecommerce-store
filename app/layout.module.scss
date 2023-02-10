@@ -1,0 +1,29 @@
+.header {
+  nav {
+    background-color: #efe9e7;
+    border: radius 6px;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+
+    & a + a,
+    span + a {
+      margin-left: 60px;
+    }
+    & div {
+      margin-left: auto;
+      display: flex;
+      gap: 6px;
+    }
+  }
+}
+.footer {
+  background-color: #7c6c77;
+  border-radius: 6px;
+  margin: 6px 0;
+  display: flex;
+  margin-top: 20px;
+  padding: 40px;
+  border-top: 2px solid var(--margin-bg-color);
+  text-align: center;
+}
