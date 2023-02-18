@@ -1,8 +1,11 @@
 import './globals.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import RootNotFound from 'next/navigation';
 import logo from '../public/logo.png';
+import CookiesBanner from './CookiesBanner';
 import ImageLogo from './ImageLogo';
+import LandingImageBottom from './LandingImageBottom';
 import styles from './layout.module.scss';
 
 export default function RootLayout({ children }) {
@@ -50,10 +53,12 @@ export default function RootLayout({ children }) {
             <br />
           </div>
         </div>
+        <LandingImageBottom />
+        <CookiesBanner />
+        <footer className={styles.footer}>
+          Copyright Tabú Inc 2023 Sponsor by Sound of Nature
+        </footer>
       </body>
-      <footer className={styles.footer}>
-        Copyright Tabu Inc 2023 <ImageLogo /> Sponsor by Sound of Nature
-      </footer>
     </html>
   );
 }
