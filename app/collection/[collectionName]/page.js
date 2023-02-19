@@ -3,6 +3,11 @@ import { NotFound } from 'next/navigation';
 import { collection } from '../../../database/collection';
 import CookiesBanner from '../../CookiesBanner';
 import CreateButton from '../../CreateButton';
+import CookiesAdder from './cookiesAdder';
+
+// we use this only if we don`t have dynamic  function like coockies or header
+
+// export const dynamic = 'force-dynamic';
 
 export default function CollectionHeadSetPage(props) {
   const singleHeadSet = collection.find((collectionHeadSet) => {
@@ -25,7 +30,7 @@ export default function CollectionHeadSetPage(props) {
           height="220"
         />
         <h2 className="h2-margin-singleHeadSet">{singleHeadSet.brandName}</h2>
-        <h5 className="price-singleHeadSet">{singleHeadSet.price}</h5>
+
         <div className="div-description-singleHeadSet">
           <h2 className="h4-description-singleHeadSet">
             {' '}
@@ -42,7 +47,8 @@ export default function CollectionHeadSetPage(props) {
               Color / size / Quantity
             </span>
             <br />
-            <span className="add-cart">Add to cart</span> <CreateButton />
+            <span className="add-cart"> 🛒 </span>
+            <CookiesAdder collectionHeadSet={singleHeadSet} />
           </h3>
         </div>
       </div>

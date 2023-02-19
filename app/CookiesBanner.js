@@ -1,19 +1,23 @@
 'use client';
 
-import { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 // checking  if  there is a  localStorage filed for the cookiesBanner
 // if not then initial value  is true
 // if yes the initial value is what is stored in the browser
+import { getLocalStorage, setLocalStorage } from '../util/localStorage';
 
 export default function CookiesBanner() {
-  const cookiesLocalStorageValue = JSON.parse(
-    window.localStorage.getItem('areCookiesTermAccepted'),
-  );
-  const cookiesInitialState =
-    cookiesLocalStorageValue === null ? false : cookiesLocalStorageValue;
-  const [areCookiesTermAccepted, setAreCookiesTermAccepted] =
-    useState(cookiesInitialState);
+  const [areCookiesTermAccepted, setAreCookiesTermAccepted] = useState(false);
+
+  useEffect(() => {
+    const cookiesLocalStorageValue = getLocalStorage('areCookiesTermAccepted');
+    // const cookiesLocalStorageValue = JSON.parse(
+    // window.localStorage.getItem('areCookiesTermAccepted'),
+    // );
+    const cookiesInitialState =
+      cookiesLocalStorageValue === undefined ? false : cookiesLocalStorageValue;
+    setAreCookiesTermAccepted(cookiesInitialState);
+  }, []);
 
   return (
     !areCookiesTermAccepted && (
@@ -28,10 +32,12 @@ export default function CookiesBanner() {
         <button
           onClick={() => {
             setAreCookiesTermAccepted(true);
-            window.localStorage.setItem(
-              'areCookiesTermAccepted',
-              JSON.stringify(true),
-            );
+            setLocalStorage('areCookiesTermAccepted', true);
+            // setAreCookiesTermAccepted(true);
+            // window.localStorage.setItem(
+            // 'areCookiesTermAccepted',
+            // </div> JSON.stringify(true),
+            // );
           }}
         >
           Accept

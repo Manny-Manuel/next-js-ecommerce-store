@@ -28,15 +28,15 @@ export const collection = [
 
   {
     id: 4,
-    brandName: 'Cat-Ears-Headset',
+    brandName: 'Cat-Headset',
     type: 'Headphone',
-    color: 'Pink-Silver',
+    color: 'Silver',
     description: '𝘓𝘰𝘳𝘦𝘮 𝘪𝘱𝘴𝘶𝘮 𝘥𝘰𝘭𝘰𝘳 𝘴𝘪𝘵 𝘢𝘮𝘦𝘵, 𝘓𝘰𝘳𝘦𝘮 𝘪𝘱𝘴𝘶𝘮 𝘥𝘰𝘭𝘰𝘳 𝘴𝘪𝘵 𝘢𝘮𝘦𝘵',
     price: '149.99$',
   },
   {
     id: 5,
-    brandName: 'Cat-Ears-Headset',
+    brandName: 'Cat-Headset',
     type: 'Headphone',
     color: 'Pink',
     description: '𝘓𝘰𝘳𝘦𝘮 𝘪𝘱𝘴𝘶𝘮 𝘥𝘰𝘭𝘰𝘳 𝘴𝘪𝘵 𝘢𝘮𝘦𝘵, 𝘓𝘰𝘳𝘦𝘮 𝘪𝘱𝘴𝘶𝘮 𝘥𝘰𝘭𝘰𝘳 𝘴𝘪𝘵 𝘢𝘮𝘦𝘵',
@@ -44,9 +44,9 @@ export const collection = [
   },
   {
     id: 6,
-    brandName: 'Cat-Ears-Headset',
+    brandName: 'Cat-Headset',
     type: 'Headphone',
-    color: 'Pink-White',
+    color: 'White',
     description: '𝘓𝘰𝘳𝘦𝘮 𝘪𝘱𝘴𝘶𝘮 𝘥𝘰𝘭𝘰𝘳 𝘴𝘪𝘵 𝘢𝘮𝘦𝘵, 𝘓𝘰𝘳𝘦𝘮 𝘪𝘱𝘴𝘶𝘮 𝘥𝘰𝘭𝘰𝘳 𝘴𝘪𝘵 𝘢𝘮𝘦𝘵',
     price: '159.99$',
   },

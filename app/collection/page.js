@@ -30,8 +30,8 @@ export default function CollectionPage() {
                   className="Images-grp"
                   src={`/images/${collections.brandName}-${collections.color}.jpg`}
                   alt={collections.type}
-                  width="220"
-                  height="220"
+                  width="200"
+                  height="200"
                 />
               </Link>
 

@@ -25,9 +25,10 @@ export default function RootLayout({ children }) {
           <nav>
             <ImageLogo />
             <Link href="/">Home</Link>
-            <Link href="/collection">Collection</Link>
-            <Link href="/services">Services</Link>
             <Link href="/about">About</Link>
+            <Link href="/collection">Collection</Link>
+
+            <Link href="/services">Services</Link>
           </nav>
         </header>
 
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
             <h2>Sounds</h2>
           </div>
           <div className="rectangle-1">
-            Nature <h2>Life</h2>
+            Nature <h1>Life</h1>
             <h2>Emotions</h2>
             <br />
           </div>
