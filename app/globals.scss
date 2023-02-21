@@ -93,7 +93,7 @@ body {
   margin-bottom: 15px;
   margin-left: 125px;
 
-  padding: 5px;
+  padding: 0px;
 }
 .Images-grp {
   filter: drop-shadow(0 0 0.3rem rgb(23, 1, 5));
@@ -101,7 +101,7 @@ body {
   background-color: #efe9e7;
   border-radius: 110px;
   position: relative;
-  left: 2px;
+  left: 10px;
   top: 10px;
 }
 .button-cart {
@@ -120,10 +120,10 @@ body {
   margin-bottom: 10px;
   margin-top: 0px;
 }
-.add-cart {
+.add-cart-shopping {
   position: relative;
   bottom: 90px;
-  left: 65px;
+  left: 60px;
   color: rgb(187, 176, 23);
 
   filter: drop-shadow(0 0 0.1rem rgb(23, 1, 5));

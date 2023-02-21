@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { NotFound } from 'next/navigation';
-import { collection } from '../../../database/collection';
+import { getCollection } from '../../../database/collection';
 import CookiesBanner from '../../CookiesBanner';
 import CreateButton from '../../CreateButton';
 import CookiesAdder from './cookiesAdder';
@@ -9,7 +9,9 @@ import CookiesAdder from './cookiesAdder';
 
 // export const dynamic = 'force-dynamic';
 
-export default function CollectionHeadSetPage(props) {
+export default async function CollectionHeadSetPage(props) {
+  const collection = await getCollection();
+
   const singleHeadSet = collection.find((collectionHeadSet) => {
     return (
       collectionHeadSet.brandName.toLowerCase() === props.params.collectionName
@@ -47,7 +49,7 @@ export default function CollectionHeadSetPage(props) {
               Color / size / Quantity
             </span>
             <br />
-            <span className="add-cart"> 🛒 </span>
+            <span className="add-cart-shopping"> 🛒 </span>
             <CookiesAdder collectionHeadSet={singleHeadSet} />
           </h3>
         </div>

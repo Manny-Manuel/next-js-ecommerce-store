@@ -1,6 +1,7 @@
-import fs from 'node:fs';
+// import fs from 'node:fs';
+import { sql } from './connect';
 
-export const collection = [
+export const collectionItems = [
   {
     id: 1,
     brandName: 'Apple-black',
@@ -99,3 +100,25 @@ export const collection = [
     price: '479.16$',
   },
 ];
+
+// testing to see if the connection have been successful
+/*
+console.log(
+  sql`
+  SELECT * FROM collection
+
+  `.then((data) => console.log(data)),
+);
+
+// this function bellow will allow us to export the items from the collection and be able to use it
+// this function is always Async that why it has to be alway awaited at the start calling of sql
+// we should remember that this type of data happen asynchronous which means one thing after the other
+
+*/
+export async function getCollection() {
+  const collection = await sql`
+  SELECT * FROM collection
+
+  `;
+  return collection;
+}

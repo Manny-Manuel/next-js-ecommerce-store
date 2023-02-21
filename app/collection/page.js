@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
-import { collection } from '../../database/collection';
+import { getCollection } from '../../database/collection';
 import CreateButton from '../CreateButton';
 import ImagesBackground from '../ImagesBackground';
 import ImagesTopCollection from '../ImagesTopCollection';
 import ImagesTopCollectionRight from '../ImagesTopCollectionRight';
 import ImageTopBackground from '../ImageTopBackground';
 
-export default function CollectionPage() {
+export default async function CollectionPage() {
+  const collection = await getCollection();
+
   return (
     <>
       <div className="Image-Background-collection">
@@ -41,7 +43,7 @@ export default function CollectionPage() {
 
               <div className="button-cart">
                 <h3>
-                  <span className="add-cart">Add to cart</span> <CreateButton />
+                  <span className="add-cart">Add to cart</span>
                 </h3>
               </div>
             </div>

@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { collection } from '../database/collection';
+import { getCollection } from '../database/collection';
 
-export default function ImageCarrusel() {
+export default async function ImageCarrusel() {
+  const collection = await getCollection();
   return (
     <main>
       {collection.map((carrusel) => {
